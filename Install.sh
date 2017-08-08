@@ -8,8 +8,18 @@
 # install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-# install python3
-brew install python3
+brew install wget
+
+
+# Download  mini conda installer
+wget https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
+
+# Install mini conda
+bash Miniconda3-latest-MacOSX-x86_64.sh
+
+# remove installer
+rm Miniconda3-latest-MacOSX-x86_64.sh
+
 
 # remove and create link python3
 brew unlink python3
@@ -36,3 +46,9 @@ sudo chmod u+x /usr/local/bin/sublime-terminal
 sudo rm -r ~/Library/Application\ Support/Sublime\ Text\ 3/
 cp -r ./Resource/Sublime\ Text\ 3/ ~/Library/Application\ Support/Sublime\ Text\ 3/
 
+
+# Reload bash_profile
+source ~/.bash_profile
+
+# Install Python package
+conda install numpy matplotlib

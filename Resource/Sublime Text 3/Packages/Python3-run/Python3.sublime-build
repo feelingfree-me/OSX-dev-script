@@ -1,5 +1,5 @@
 {
-    "shell_cmd": "python3 -u \"$file\"",
+    "shell_cmd": "python -u \"$file\"",
     "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
     "selector": "source.python, source.py, source.py3",
 
@@ -9,11 +9,11 @@
     [
         {
             "name": "Run",
-            "shell_cmd": "/usr/local/bin/sublime-terminal \"$file\" python3",
+            "shell_cmd": "/usr/local/bin/sublime-terminal \"$file\" python",
         },
         {
             "name": "Syntax Check",
-            "shell_cmd": "python3 -m py_compile \"${file}\"",
+            "shell_cmd": "python -m py_compile \"${file}\"",
         }
     ]
 }
